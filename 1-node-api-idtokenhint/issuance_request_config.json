@@ -12,7 +12,7 @@
     "clientName": "Verifiable Credential Expert Sample"
   },
   "issuance": {
-    "type": "VerifiableCredentialExpert",
+    "type": "VerifiedCredentialExpert",
     "manifest": "CREDENTIAL URL IN THIS SAMPLE WILL BE COPIED FROM APPSETTINGS.JSON",
     "pin": {
       "value": "123456",
