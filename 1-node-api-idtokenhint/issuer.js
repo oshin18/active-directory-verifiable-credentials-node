@@ -107,11 +107,11 @@ mainApp.app.get('/api/issuer/issuance-request', async (req, res) => {
   }
   // here you could change the payload manifest and change the firstname and lastname
   if ( issuanceConfig.issuance.claims ) {
-    issuanceConfig.issuance.claims.given_name = "Megan";
-    issuanceConfig.issuance.claims.family_name = "Bowen";
+    issuanceConfig.issuance.claims.firstName = "Oshin";
+    issuanceConfig.issuance.claims.lastName = "Gupta";
   }
 
-  console.log( 'VC Client API Request' );
+  console.log( 'VC Client API Request' , issuanceConfig);
   var client_api_request_endpoint = `${mainApp.config.msIdentityHostName}${mainApp.config.azTenantId}/verifiablecredentials/request`;
   console.log( client_api_request_endpoint );
   console.log( issuanceConfig );
@@ -150,7 +150,6 @@ mainApp.app.post('/api/issuer/issuance-request-callback', parser, async (req, re
   });
   req.on('end', function () {
     requestTrace( req );
-    console.log( body );
     if ( req.headers['api-key'] != apiKey ) {
       res.status(401).json({
         'error': 'api-key wrong or missing'
