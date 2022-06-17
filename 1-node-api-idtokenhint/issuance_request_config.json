@@ -19,8 +19,9 @@
       "length": 4
     },
     "claims": {
-      "firstName": "FIRSTNAME",
-      "lastName": "LASTNAME"
+      "fullName": "FULLNAME",
+      "ssn": "SSN",
+      "dob": "DOB"
     }
   }
 }
